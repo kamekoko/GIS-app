@@ -8,7 +8,7 @@ var count = 0;
 
 jsonObject.features.forEach((obj) => {
     count++;
-    if (count > 2) return;
+    if (count > 4) return;
     console.log(JSON.stringify(obj, null, "  "));
     console.log(',')
 });
