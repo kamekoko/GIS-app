@@ -10,6 +10,7 @@ jsonObject.features.forEach((obj) => {
     count++;
     if (count > 100) return;
     console.log(JSON.stringify(obj, null, "  "));
+    console.log(',')
 });
 
 console.log()
