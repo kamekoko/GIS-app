@@ -12,11 +12,22 @@ const bbox = [ //[min lon, max lon][min lat, max lat]
   [minLon, maxLon],
   [minLat, maxLat]
 ];
-// console.log(bbox);
 
 const jsonObject = JSON.parse(fs.readFileSync('./out3.geojson', 'utf8'));
 
 console.log('{\n\t"type": "FeatureCollection",\n\t "features": [');
+
+const pointObject = {
+	"type": "Feature",
+	"properties": { },
+	"geometry": {
+		"type": "MultiPoint",
+		"coordinates": [[136.52501053249725, 36.39326604089627], [136.52831501381425, 36.37429836513503]]
+	}
+}
+
+console.log(JSON.stringify(pointObject, null, "  "));
+console.log(',');
 
 var count = 0;
 
