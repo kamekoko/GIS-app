@@ -3,10 +3,10 @@ const fs = require('fs');
 const start = [36.39326604089627, 136.52501053249725];
 const end = [36.37429836513503, 136.52831501381425];
 
-const minLon = Math.min(start[0], end[0]) - 0.01;
-const maxLon = Math.max(start[0], end[0]) + 0.01;
-const minLat = Math.min(start[1], end[1]) - 0.01;
-const maxLat = Math.max(start[1], end[1]) + 0.01;
+const minLon = Math.min(start[0], end[0]) - 0.03;
+const maxLon = Math.max(start[0], end[0]) + 0.03;
+const minLat = Math.min(start[1], end[1]) - 0.03;
+const maxLat = Math.max(start[1], end[1]) + 0.03;
 
 const bbox = [ //[min lon, max lon][min lat, max lat]
   [minLon, maxLon],
