@@ -1,5 +1,7 @@
 const fs = require('fs');
 
+
+// input
 const start = [36.39326604089627, 136.52501053249725];
 const end = [36.37429836513503, 136.52831501381425];
 
@@ -8,13 +10,13 @@ const maxLon = Math.max(start[0], end[0]) + 0.03;
 const minLat = Math.min(start[1], end[1]) - 0.03;
 const maxLat = Math.max(start[1], end[1]) + 0.03;
 
-const bbox = [ //[min lon, max lon][min lat, max lat]
+const bbox = [
   [minLon, maxLon],
   [minLat, maxLat]
 ];
 
-const jsonObject = JSON.parse(fs.readFileSync('./out3.geojson', 'utf8'));
 
+// initialize the geojson
 console.log('{\n\t"type": "FeatureCollection",\n\t "features": [');
 
 const pointObject = {
@@ -29,13 +31,12 @@ const pointObject = {
 console.log(JSON.stringify(pointObject, null, "  "));
 console.log(',');
 
-var count = 0;
 
-jsonObject.features.forEach((obj) => {
-  // count++;
-  // if (count > 2) return;
-  // console.log(obj.geometry.coordinates[0][0][0] + " , " + obj.geometry.coordinates[0][0][1]);
+// data collection: forest
+const forestObject = JSON.parse(fs.readFileSync('./out3.geojson', 'utf8'));
 
+forestObject.features.forEach((obj) => {
+  // range constraint
   if (obj.geometry.coordinates[0][0][0] > minLat &&
       obj.geometry.coordinates[0][0][0] < maxLat &&
       obj.geometry.coordinates[0][0][1] > minLon &&
@@ -45,4 +46,9 @@ jsonObject.features.forEach((obj) => {
     }
 });
 
+
+// data collection: farmland
+const farmObject = JSON.parse(fs.readFileSync())
+
+// end of the geojson
 console.log(']\n}');
