@@ -4,7 +4,7 @@ from pathlib import Path
 start = [36.39326604089627, 136.52501053249725];
 end = [36.37429836513503, 136.52831501381425];
 
-minLat = min([start[0], end[0]]) - 0.03;
+minLat = min([start[0], end[0]]) - 0.01;
 maxLat = max([start[0], end[0]]) + 0.03;
 minLng = min([start[1], end[1]]) - 0.03;
 maxLng = max([start[1], end[1]]) + 0.03;
@@ -31,7 +31,7 @@ def xy2ll(inputPath: Path, outputPath: Path):
                 if val[0][0] > minLng and val[0][0] < maxLng and val[0][1] > minLat and val[0][1] < maxLat:
                     for lnglat in val:
                         newCoordinate.append(lnglat)
-                        
+
                     newCoordinates.append(newCoordinate)
 
             if len(newCoordinates) >= 1:
@@ -56,7 +56,7 @@ def xy2ll(inputPath: Path, outputPath: Path):
 
 def main():
     outputPath = Path(__file__).parent/'../../data/out-farmland-limited.geojson'
-    inputPath = Path(__file__).parent/'../../data/out-farmland-converted.geojson'
+    inputPath = Path(__file__).parent/'../../data/out-farmland-edited.geojson'
     xy2ll(inputPath, outputPath)
 
 if __name__ == '__main__':
