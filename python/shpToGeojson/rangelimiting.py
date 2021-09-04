@@ -29,11 +29,16 @@ def xy2ll(inputPath: Path, outputPath: Path):
             newCoordinates = []
             count = count + 1
 
-            for lnglat in elem['geometry']['coordinates']:
-                if count < 2:
-                    print(lnglat)
-                # if lnglat[0] > minLng and lnglat[0] < maxLng and lnglat[1] > minLat and lnglat[1] < maxLat:
-                    newCoordinates.append(lnglat)
+            for val in elem['geometry']['coordinates']:
+                newCoordinate = []
+
+                for lnglat in val:
+                    if count < 2:
+                    # if lnglat[0] > minLng and lnglat[0] < maxLng and lnglat[1] > minLat and lnglat[1] < maxLat:
+                        newCoordinate.append(lnglat)
+
+                if len(newCoordinate) >= 1:    
+                    newCoordinates.append(newCoordinate)
 
             if len(newCoordinates) >= 1:
                 featureStr = {

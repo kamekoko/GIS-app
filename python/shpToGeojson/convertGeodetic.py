@@ -26,9 +26,14 @@ def xy2ll(inputPath: Path, outputPath: Path):
         for elem in json_load['features']:
             newCoordinates = []
 
-            for lnglat in elem['geometry']['coordinates']:
-                lng, lat = tky2wgs_approx(lnglat[0], lnglat[1], )
-                newCoordinates.append([lng, lat])
+            for val in elem['geometry']['coordinates']:
+                newCoordinate = []
+
+                for lnglat in val:
+                    lng, lat = tky2wgs_approx(lnglat[0], lnglat[1], degree=2)
+                    newCoordinate.append([lng, lat])
+
+                newCoordinates.append(newCoordinate)
 
             featureStr = {
                 "type": "Feature",
