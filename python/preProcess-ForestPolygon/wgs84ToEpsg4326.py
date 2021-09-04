@@ -55,8 +55,8 @@ def wgs84ToEpsg4326(inputPath: Path, outputPath: Path):
         f.writelines(ls)
 
 def main():
-    outputPath = Path(__file__).parent/'../../data/out-forest-10-edited.geojson'
-    inputPath = Path(__file__).parent/'../../data/out-forest-10.geojson'
+    outputPath = Path(__file__).parent/'../../data/out-forest-7-edited.geojson'
+    inputPath = Path(__file__).parent/'../../data/out-forest-7.geojson'
     wgs84ToEpsg4326(inputPath, outputPath)
 
 if __name__ == '__main__':

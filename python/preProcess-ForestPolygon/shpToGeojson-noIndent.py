@@ -52,14 +52,14 @@ def json_make(path: Path, obj: dict) -> None:
             ls.append('[\n')
         if ls[-1] == ']':
             ls[-1] = ','
-        ls.insert(len(ls), f'{json.dumps(obj, indent=4, ensure_ascii=False)}')
+        ls.insert(len(ls), f'{json.dumps(obj, ensure_ascii=False)}')
         ls.insert(len(ls), '\n]')
     with open(path, 'w') as f:
         f.writelines(ls)
 
 def main():
-    path = Path(__file__).parent/'../../data/out-forest-10.geojson'
-    geojson = zipped_shp_to_geojson(Path(__file__).parent/'../../data/A13-15_17_GML_10.zip')
+    path = Path(__file__).parent/'../../data/out-forest-7.geojson'
+    geojson = zipped_shp_to_geojson(Path(__file__).parent/'../../data/A13-15_17_GML_7.zip')
     json_make(path, geojson)
 
 if __name__ == '__main__':

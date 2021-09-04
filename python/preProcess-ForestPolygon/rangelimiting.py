@@ -27,7 +27,6 @@ def xy2ll(inputPath: Path, outputPath: Path):
 
             for val in elem['geometry']['coordinates']:
                 newCoordinate = []
-                print(val[0][0])
 
                 if val[0][0] > minLng and val[0][0] < maxLng and val[0][1] > minLat and val[0][1] < maxLat:
                     for lnglat in val:
@@ -57,8 +56,8 @@ def xy2ll(inputPath: Path, outputPath: Path):
         f.writelines(ls)
 
 def main():
-    outputPath = Path(__file__).parent/'../../data/out-forest-10-limited.geojson'
-    inputPath = Path(__file__).parent/'../../data/out-forest-10-edited.geojson'
+    outputPath = Path(__file__).parent/'../../data/out-forest-7-limited.geojson'
+    inputPath = Path(__file__).parent/'../../data/out-forest-7-edited.geojson'
     xy2ll(inputPath, outputPath)
 
 if __name__ == '__main__':
