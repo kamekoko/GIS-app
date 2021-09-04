@@ -103,10 +103,10 @@ def xy2ll(inputPath: Path, outputPath: Path):
                     newCoordinate = []
 
                     for xy in val:
-                        lat, lng = calc_lat_lon(xy[0], xy[1], origins[0][0], origins[0][1])
+                        lat, lng = calc_lat_lon(xy[1], xy[0], origins[0][0], origins[0][1])
                         newCoordinate.append([lng, lat])
 
-                    newCoordinates.append(newCoordinate)                
+                    newCoordinates.append(newCoordinate)
 
                 featureStr = {
                     "type": "Feature",

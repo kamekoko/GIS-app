@@ -4,10 +4,10 @@ from pathlib import Path
 start = [36.39326604089627, 136.52501053249725];
 end = [36.37429836513503, 136.52831501381425];
 
-minLng = min([start[0], end[0]]) - 0.03;
-maxLng = max([start[0], end[0]]) + 0.03;
-minLat = min([start[1], end[1]]) - 0.03;
-maxLat = max([start[1], end[1]]) + 0.03;
+minLat = min([start[0], end[0]]) - 0.03;
+maxLat = max([start[0], end[0]]) + 0.03;
+minLng = min([start[1], end[1]]) - 0.03;
+maxLng = max([start[1], end[1]]) + 0.03;
 
 bbox = [
   [minLng, maxLng],
@@ -20,24 +20,18 @@ def xy2ll(inputPath: Path, outputPath: Path):
 
     with open(outputPath, 'w') as f:
         ls = []
-
         features = []
-
-        count = 0
 
         for elem in json_load['features']:
             newCoordinates = []
-            count = count + 1
 
             for val in elem['geometry']['coordinates']:
                 newCoordinate = []
 
-                for lnglat in val:
-                    if count < 2:
-                    # if lnglat[0] > minLng and lnglat[0] < maxLng and lnglat[1] > minLat and lnglat[1] < maxLat:
+                if val[0][0] > minLng and val[0][0] < maxLng and val[0][1] > minLat and val[0][1] < maxLat:
+                    for lnglat in val:
                         newCoordinate.append(lnglat)
-
-                if len(newCoordinate) >= 1:    
+                        
                     newCoordinates.append(newCoordinate)
 
             if len(newCoordinates) >= 1:
