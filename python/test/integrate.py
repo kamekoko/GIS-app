@@ -1,18 +1,8 @@
 import json
 from pathlib import Path
 
-start = [36.39326604089627, 136.52501053249725];
-end = [36.37429836513503, 136.52831501381425];
-
-minLat = min([start[0], end[0]]) - 0.01;
-maxLat = max([start[0], end[0]]) + 0.03;
-minLng = min([start[1], end[1]]) - 0.03;
-maxLng = max([start[1], end[1]]) + 0.03;
-
-bbox = [
-  [minLng, maxLng],
-  [minLat, maxLat]
-];
+start = [136.52501053249725, 36.39326604089627];
+end = [136.52831501381425, 36.37429836513503];
 
 def integrate(farmlandPath: Path, forestPath: Path, outputPath: Path):
     json_open_farmland = open(farmlandPath, 'r')
