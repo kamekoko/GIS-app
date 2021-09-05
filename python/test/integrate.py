@@ -28,7 +28,7 @@ def integrate(farmlandPath: Path, forestPath: Path, outputPath: Path):
         "type": "Feature",
         "properties": { },
         "geometry": {
-        "type": "Point",
+        "type": "MultiPoint",
         "coordinates": [start, end]
     }}
     integratedFeatures.append(multiPoint)
