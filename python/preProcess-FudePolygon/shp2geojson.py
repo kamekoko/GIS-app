@@ -44,22 +44,13 @@ def zipped_shp_to_geojson(zipped_shp):
             continue
     return geojson
 
-def json_make(path: Path, obj: dict) -> None:
-    ls = None
-    with open(path, 'r+') as f:
-        ls = f.readlines()
-        if ls == []:
-            ls.append('[\n')
-        if ls[-1] == ']':
-            ls[-1] = ','
-        ls.insert(len(ls), f'{json.dumps(obj, indent=4, ensure_ascii=False)}')
-        ls.insert(len(ls), '\n]')
+def json_make(path, geojson):
     with open(path, 'w') as f:
-        f.writelines(ls)
+        f.writelines(json.dumps(geojson, indent=4, ensure_ascii=False))
 
 def main():
-    path = Path(__file__).parent/'../../data/out-farmland.geojson'
-    geojson = zipped_shp_to_geojson(Path(__file__).parent/'../../data/17203小松市（2021公開）.zip')
+    path = Path(__file__).parent/'../../data/output/out-farmland2.geojson'
+    geojson = zipped_shp_to_geojson(Path(__file__).parent/'../../../../data/17203小松市（2021公開）.zip')
     json_make(path, geojson)
 
 if __name__ == '__main__':
