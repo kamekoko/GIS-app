@@ -50,7 +50,7 @@ def json_make(path, geojson):
 
 def main():
     path = Path(__file__).parent/'../../data/out-forest-10.geojson'
-    geojson = zipped_shp_to_geojson(Path(__file__).parent/'../../data/A13-15_17_GML_10.zip')
+    geojson = zipped_shp_to_geojson(Path(__file__).parent/'../../../../data/A13-15_17_GML_10.zip')
     json_make(path, geojson)
 
 if __name__ == '__main__':

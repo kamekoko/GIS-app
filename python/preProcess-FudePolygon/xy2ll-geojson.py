@@ -6,7 +6,7 @@ origins = [
     [36.0, 137.166666666666667]
 ]
 
-def calc_lat_lon(x, y, phi0_deg, lambda0_deg):
+def calc_lat_lon(x, y, phi0_deg, lambda0_deg): #日本測地系/平面直角座標 → 世界測地系/緯度軽度
     """ 平面直角座標を緯度経度に変換する
     - input:
         (x, y): 変換したいx, y座標[m]
