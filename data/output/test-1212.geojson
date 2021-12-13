@@ -2,11 +2,14 @@
     "type": "FeatureCollection",
     "features": [
         {
-            "type": "Point",
-            "coordinates": [
-                136.586772348,
-                36.4518277642
-            ],
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.586772348,
+                    36.4518277642
+                ]
+            },
             "properties": {
                 "gid": 1171,
                 "p20_001": "17211",
@@ -29,11 +32,14 @@
             }
         },
         {
-            "type": "Point",
-            "coordinates": [
-                136.583915,
-                36.453242
-            ],
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.583915,
+                    36.453242
+                ]
+            },
             "properties": {
                 "gid": 1172,
                 "p20_001": "17211",
