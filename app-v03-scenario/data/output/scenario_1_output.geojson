@@ -1,0 +1,243 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "id": "7",
+            "type": "Feature",
+            "properties": {
+                "gid": 8,
+                "id": "7",
+                "person_id": 7.0,
+                "timestamp": "2021-01-15 09:00:00"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.35015110239465,
+                    36.319902271280476
+                ]
+            }
+        },
+        {
+            "id": "5",
+            "type": "Feature",
+            "properties": {
+                "gid": 6,
+                "id": "5",
+                "person_id": 5.0,
+                "timestamp": "2021-01-15 09:00:00"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.35021547540734,
+                    36.31990119072229
+                ]
+            }
+        },
+        {
+            "id": "23",
+            "type": "Feature",
+            "properties": {
+                "gid": 24,
+                "id": "23",
+                "person_id": 5.0,
+                "timestamp": "2021-01-15 09:00:10"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.35021547540734,
+                    36.31990119072229
+                ]
+            }
+        },
+        {
+            "id": "16",
+            "type": "Feature",
+            "properties": {
+                "gid": 17,
+                "id": "16",
+                "person_id": 7.0,
+                "timestamp": "2021-01-15 09:00:05"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.35021749862864,
+                    36.319921537637505
+                ]
+            }
+        },
+        {
+            "id": "14",
+            "type": "Feature",
+            "properties": {
+                "gid": 15,
+                "id": "14",
+                "person_id": 5.0,
+                "timestamp": "2021-01-15 09:00:05"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.35022622868303,
+                    36.319897416799535
+                ]
+            }
+        },
+        {
+            "id": "15",
+            "type": "Feature",
+            "properties": {
+                "gid": 16,
+                "id": "15",
+                "person_id": 6.0,
+                "timestamp": "2021-01-15 09:00:05"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.35024047440774,
+                    36.31990598621104
+                ]
+            }
+        },
+        {
+            "id": "24",
+            "type": "Feature",
+            "properties": {
+                "gid": 25,
+                "id": "24",
+                "person_id": 6.0,
+                "timestamp": "2021-01-15 09:00:10"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.35024047440774,
+                    36.31990598621104
+                ]
+            }
+        },
+        {
+            "id": "6",
+            "type": "Feature",
+            "properties": {
+                "gid": 7,
+                "id": "6",
+                "person_id": 6.0,
+                "timestamp": "2021-01-15 09:00:00"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.35024699136144,
+                    36.31990551295493
+                ]
+            }
+        },
+        {
+            "id": "10",
+            "type": "Feature",
+            "properties": {
+                "gid": 11,
+                "id": "10",
+                "person_id": 0.0,
+                "timestamp": "2021-01-15 09:00:05"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.3502885822796,
+                    36.319935778640094
+                ]
+            }
+        },
+        {
+            "id": "19",
+            "type": "Feature",
+            "properties": {
+                "gid": 20,
+                "id": "19",
+                "person_id": 0.0,
+                "timestamp": "2021-01-15 09:00:10"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.3502885822796,
+                    36.319935778640094
+                ]
+            }
+        },
+        {
+            "id": "0",
+            "type": "Feature",
+            "properties": {
+                "gid": 1,
+                "id": "0",
+                "person_id": 0.0,
+                "timestamp": "2021-01-15 09:00:00"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.35032322986982,
+                    36.31994753288563
+                ]
+            }
+        },
+        {
+            "id": "11",
+            "type": "Feature",
+            "properties": {
+                "gid": 12,
+                "id": "11",
+                "person_id": 1.0,
+                "timestamp": "2021-01-15 09:00:05"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.35032802928475,
+                    36.31992287931134
+                ]
+            }
+        },
+        {
+            "id": "1",
+            "type": "Feature",
+            "properties": {
+                "gid": 2,
+                "id": "1",
+                "person_id": 1.0,
+                "timestamp": "2021-01-15 09:00:00"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.35032870054198,
+                    36.31992182047123
+                ]
+            }
+        },
+        {
+            "id": "20",
+            "type": "Feature",
+            "properties": {
+                "gid": 21,
+                "id": "20",
+                "person_id": 1.0,
+                "timestamp": "2021-01-15 09:00:10"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    136.35032870054198,
+                    36.31992182047123
+                ]
+            }
+        }
+    ]
+}
